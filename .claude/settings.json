@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(go build *)",
+      "Bash(PORT=9999 go run .)",
+      "Bash(curl -s http://localhost:9999/health)",
+      "Bash(curl -s http://localhost:9999/countries)",
+      "Bash(curl -s http://localhost:9999/countries/france/plans)",
+      "Bash(curl -s http://localhost:9999/countries/nonexistent/plans)",
+      "Bash(kill %1)",
+      "Bash(pkill -f \"go run .\")",
+      "Bash(go get *)",
+      "Bash(mysql --version)",
+      "Bash(brew services *)",
+      "Bash(mysql -u root -e \"CREATE DATABASE IF NOT EXISTS esimply CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;\")",
+      "Bash(DSN=\"root:@tcp\\(localhost:3306\\)/esimply?parseTime=true&charset=utf8mb4\" go run .)",
+      "Bash(curl -s http://localhost:8080/health)",
+      "Bash(curl -s http://localhost:8080/countries)",
+      "Bash(curl -s http://localhost:8080/countries/france/plans)",
+      "Bash(curl -s http://localhost:8080/countries/unknown/plans)"
+    ]
+  }
+}
